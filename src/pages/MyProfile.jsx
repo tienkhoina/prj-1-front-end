@@ -109,7 +109,8 @@ let MyProfile = () => {
                 let res = await axios.post("https://prj-1-face-info-backend.onrender.com/api/update-face", {
                         userId: id,
                         image: image,
-                    })
+                })
+                   console.log("res: ",res)
                    if (res.data.message === "OK") {
                         alert('You can login by face')
                    }
