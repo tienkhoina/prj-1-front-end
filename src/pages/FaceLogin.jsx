@@ -39,7 +39,7 @@ const App = () => {
 
   // Gửi ảnh mỗi 3 giây
   useEffect(() => {
-    const interval = setInterval(sendImageToServer, 3000);
+    const interval = setInterval(sendImageToServer, 15000);
     return () => clearInterval(interval);
   }, []);
 
@@ -58,7 +58,7 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
       {/* Header */}
       <h1 className="text-2xl font-bold mb-6 text-gray-700">
-        Vui lòng giữ khuôn mặt ít nhất 3s để nhận diện
+        Vui lòng giữ khuôn mặt ít nhất 15s để nhận diện
       </h1>
 
       {/* Camera */}
