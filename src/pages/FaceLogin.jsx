@@ -25,7 +25,7 @@ const App = () => {
         const base64String = imageSrc.split(",")[1];
 
         try {
-          const response = await axios.post("http://localhost:5000/api/login", { image: base64String });
+          const response = await axios.post("https://prj-1-face-info-backend.onrender.com/api/login", { image: base64String });
           setName(response.data.name);
           setEmail(response.data.email);
           setId(response.data.id);
