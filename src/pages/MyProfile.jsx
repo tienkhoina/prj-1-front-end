@@ -89,6 +89,8 @@ let MyProfile = () => {
                 userData,
             });
 
+            
+
             console.log("Response from API:", response.data);
             if (response.data.errCode === 0) {
                 setIsEdit(false);
@@ -100,6 +102,29 @@ let MyProfile = () => {
             console.error("Failed to update profile:", error);
             alert("An error occurred while updating the profile. Please try again.");
         }
+        
+
+        if (userData.image) {
+               try {
+                let res = await axios.post("https://prj-1-face-info-backend.onrender.com/api/update-face", {
+                        userId: id,
+                        image: image,
+                    })
+                   if (res.data.message === "OK") {
+                        alert('You can login by face')
+                   }
+                   else {
+                       alert('You cannot login by face')
+                   }
+               } catch (error) {
+                    alert('You cannot login by face')
+               }
+                
+        }
+        else {
+            alert('You cannot login by face')
+        }
+        
     };
 
     return (

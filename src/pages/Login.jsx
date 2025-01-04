@@ -132,6 +132,7 @@ const Login = () => {
                     ? <p>Already have an account? <span onClick={() => setState('Login')} className='text-primary underline cursor-pointer'>Login here</span></p>
                     : <p>Create a new account? <span onClick={() => setState('Sign Up')} className='text-primary underline cursor-pointer'>Click here</span></p>
                 }
+                <p>Login with Face? <span onClick={() => navigate('/facelogin')} className='text-primary underline cursor-pointer'>Click here</span></p>
             </div>
         </form>
     );

@@ -15,6 +15,7 @@ import ChangePassword from "./pages/ChangePassword.jsx";
 import Patients from "./pages/Patients.jsx";
 import PreAppointmentComment from "./pages/preAppointmenComment.jsx"
 import PreResult from "./pages/PreResult.jsx"
+import FaceLogin from "./pages/FaceLogin.jsx"
 
 // Nhập khẩu ứng dụng Admin
 import AdminApp from './admin/src/App.jsx'; // Đảm bảo đường dẫn chính xác tới App.jsx của admin
@@ -69,7 +70,8 @@ const App = () => {
         <Route path='/change-password' element={<ChangePassword />} />
         <Route path='/patients' element={<Patients />} />
         <Route path='/pre-appointment-info/:patientId/:timeType/:date' element={<PreAppointmentComment />} />
-        <Route path='/pre-result/:index' element={<PreResult/>} />
+        <Route path='/pre-result/:index' element={<PreResult />} />
+        <Route path="/facelogin" element={<FaceLogin />} />
         
         {/* Routes cho ứng dụng admin */}
         <Route path="/admin/*" element={<AdminApp />} /> {/* Đảm bảo AdminApp sẽ được render khi truy cập /admin */}
