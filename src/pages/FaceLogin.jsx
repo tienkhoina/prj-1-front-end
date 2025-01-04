@@ -39,7 +39,7 @@ const App = () => {
 
   // Gửi ảnh mỗi 3 giây
   useEffect(() => {
-    const interval = setInterval(sendImageToServer, 15000);
+    const interval = setInterval(sendImageToServer, 3000);
     return () => clearInterval(interval);
   }, []);
 
