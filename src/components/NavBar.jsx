@@ -9,16 +9,20 @@ const NavBar = () => {
     const { userId, setUserId, user, roleId, checkSaw } = useUser();
 
     const handleLogout = () => {
-        // Clear user context
-        setUserId(null);
+    // Clear user context
+    setUserId(null);
 
-        // Remove token (if stored in localStorage or sessionStorage)
-        localStorage.removeItem('authToken');
-        sessionStorage.removeItem('authToken');
+    // Remove token (if stored in localStorage or sessionStorage)
+    localStorage.removeItem('authToken');
+    sessionStorage.removeItem('authToken');
 
-        // Redirect to login page
-        navigate('/login');
-    };
+    // Redirect to login page
+    navigate('/login');
+
+    // Reload the page
+    window.location.reload();
+};
+
 
     const toPath = (roleId === 'R2' || roleId === null) ? '/doctors' : '/patients';
 
