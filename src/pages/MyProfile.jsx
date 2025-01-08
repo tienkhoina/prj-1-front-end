@@ -108,7 +108,7 @@ let MyProfile = () => {
                try {
                 let res = await axios.post("https://prj-1-face-info-backend.onrender.com/api/update-face", {
                         userId: id,
-                        image: image,
+                        image: userData.image,
                 })
                    console.log("res: ",res)
                    if (res.data.message === "OK") {
